@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chia Seed | A Health Essential</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="./assets/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+            height: auto;
+            min-height: 500px;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        
+        /* Animation classes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .animate-delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        /* Add hover animations */
+        .feature-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .feature-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Pulse animation for CTA */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .btn-pulse:hover {
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 767px) {
+            .hero-gradient {
+                min-height: 400px;
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+            
+            .hero-content {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+            
+            /* Adjust the background image on mobile */
+            .hero-gradient .absolute.right-0 {
+                opacity: 0.4;
+            }
+            
+            .mobile-menu {
+                transition: all 0.3s ease;
+                max-height: 0;
+                overflow: hidden;
+            }
+            
+            .mobile-menu.open {
+                max-height: 500px;
+            }
+        }
+          .nav-link:hover span:first-child {
+        transform: translateY(-2px);
+    }
+    .nav-link span:first-child {
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Top Announcement Bar -->
+    <div class="text-black text-center py-2 px-4 text-sm font-medium">
+        🚚 Free local delivery on orders over Rs.300 | 📞 Order by phone: +91 886157809
+    </div>
+
+    <!-- Navigation -->
+    <nav class=" shadow-md sticky top-0 z-50 bg-green-800">
+        <div class="container mx-auto px-4 ">
+            <div class="flex justify-between items-center py-4 ">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-white font-heading "><img class="h-12"  src="./images/logo-white.png" alt="logo"/></a>
+                </div>
+                
+               <div class="hidden md:flex items-center space-x-6">
+                      <a href="#about" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                        <span>About</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                      <a href="#benefits" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                        <span>Benefits</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                      <a href="#usage" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                        <span>Usage</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                      <a href="#testimonials" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                        <span>Testimonials</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                      <a href="#contact" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                        <span>Contact</span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
+                      </a>
+                    </div>
+
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white">
+            <div class="px-2 pt-2 pb-4 space-y-1">
+                <a href="#about" class="block px-3 py-2 text-green-800 hover:text-green-600 hover:bg-green-50">About</a>
+                <a href="#benefits" class="block px-3 py-2 text-green-800 hover:text-green-600 hover:bg-green-50">Benefits</a>
+                <a href="#usage" class="block px-3 py-2 text-green-800 hover:text-green-600 hover:bg-green-50">Usage</a>
+                <a href="#testimonials" class="block px-3 py-2 text-green-800 hover:text-green-600 hover:bg-green-50">Testimonials</a>
+                <a href="#contact" class="block px-3 py-2 text-green-800 hover:text-green-600 hover:bg-green-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative hero-gradient overflow-hidden">
+        <!-- Background image for right side -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-green-900 to-transparent z-10"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-full">
+                <img src="./images/Chia 3.png" alt="Chia Seeds Background" 
+                    class="w-full h-full object-cover scale-x-[-1]">
+            </div>
+        </div>
+        
+        <!-- Content container -->
+        <div class="container mx-auto px-4 relative z-10 hero-content">
+            <div class="flex flex-col md:flex-row items-center py-10 md:py-0 md:h-[500px]">
+                <!-- Left side - text content -->
+                <div class="md:w-1/2 text-white flex flex-col justify-center py-10">
+               <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-6 animate-fadeInUp">
+  Chia Seed<br>
+  <span class="relative inline-block text-[#FFEB3B] animate-fadeInUp animate-delay-100">
+    A Health Essential
+    <span class="absolute left-0 -bottom-1 w-full h-2 bg-white opacity-30 -z-10 rounded"></span>
+  </span>
+</h1>
+
+                    <p class="text-lg mb-6 text-green-100 max-w-md animate-fadeInUp animate-delay-200">Small in size but packed with nutrition. Discover the power of premium chia seeds for your healthy lifestyle.</p>
+                    <div class="flex space-x-4 animate-fadeInUp animate-delay-300">
+                        <a href="#contact" class="bg-white text-green-700 font-bold px-6 py-3 rounded-full hover:bg-green-50 transition duration-300 text-sm md:text-base">Contact US</a>
+                        <a href="#benefits" class="border-2 border-white text-white font-bold px-6 py-3 rounded-full hover:bg-white hover:text-green-700 transition duration-300 text-sm md:text-base">View Benefits</a>
+                    </div>
+                </div>
+                
+                <!-- Right side - empty div to push content to left -->
+                <div class="md:w-1/2"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Chia Seeds -->
+    <section id="about" class="relative py-20 bg-white">
+        <!-- Full-height background image on left -->
+        <div class="absolute left-0 top-0 bottom-0 w-1/2 hidden lg:block">
+            <img src="./images/Chia 2.png" alt="Chia Seeds Background" 
+                class="w-full h-full object-cover">    
+        </div>
+        
+        <!-- Content container -->
+        <div class="container mx-auto px-6 relative">
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Empty div to push content to right (for desktop) -->
+                <div class="lg:w-1/2 hidden lg:block"></div>
+                
+                <!-- Content on right -->
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class=" mb-10">
+                      <h2 class="text-4xl md:text-4xl font-bold text-[#2E7D32] animate-fadeInUp inline-flex gap-2 items-end relative">
+                        About Our
+                        <span class="relative inline-block">
+                          Chia Seeds
+                          <span class="absolute left-0 -bottom-1 w-full h-2 bg-[#FFEB3B] -z-10 rounded"></span>
+                        </span>
+                      </h2>
+                    </div>
+
+        
+                    <p class="text-lg mb-6 text-gray-700 animate-fadeInUp animate-delay-100">At Vipka, we grow premium-quality chia seeds on our very own farm located in the fertile lands of Mysore, Karnataka. Our seeds are cultivated using sustainable, chemical-free farming practices that preserve both soil health and seed purity. Because we control the entire journey — from seed to packaging — we ensure every batch meets the highest standards of freshness, nutrition, and safety. Our chia seeds are rich in Omega-3 fatty acids, fiber, protein, and antioxidants, making them a perfect superfood for daily wellness.</p>
+                    <p class="text-lg mb-6 text-gray-700 animate-fadeInUp animate-delay-200">With the motto "We Grow. We Sell.", we bring you farm-direct chia seeds — no middlemen, no compromises. Every seed is harvested with care and processed minimally to retain its natural goodness. Whether you blend it into smoothies, sprinkle it on salads, or soak it overnight for a nutritious breakfast, Vipka Chia Seeds deliver both health and taste. Choosing Vipka means choosing purity, transparency, and a healthier lifestyle rooted in nature</p>
+                    <p class="text-lg mb-6 text-gray-700 animate-fadeInUp animate-delay-300"> At Vipka, our commitment goes beyond just selling chia seeds — it's about building trust and promoting healthy living. By growing our own produce on our Mysore farm, we ensure every step of the process is clean, ethical, and eco-friendly. Our team is made up of passionate farmers and food lovers who believe in delivering nutrition straight from the source. With Vipka Chia Seeds, you're not just adding a superfood to your diet — you're supporting local farming, sustainability, and a brand that truly believes in growing good health naturally.</p>
+                    <div class="grid grid-cols-2 gap-4 animate-fadeInUp animate-delay-400">
+                        <div class="bg-green-100 p-4 rounded-lg">
+                            <div class="text-green-600 text-2xl mb-2 feature-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <h4 class="font-bold">Ancient Origins</h4>
+                            <p class="text-sm text-gray-700">Used by Aztecs as energy food</p>
+                        </div>
+                        <div class="bg-green-900 text-white p-4 rounded-lg">
+                            <div class="text-green-400 text-2xl mb-2 feature-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4 class="font-bold">Plant Power</h4>
+                            <p class="text-sm">From the Salvia hispanica plant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutritional Benefits -->
+    <section id="benefits" class="relative py-20 bg-white">
+        <!-- Full-height background image on right -->
+        <div class="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
+            <img src="./images/croped_2nd image.jpg" alt="Chia Nutrition Background" 
+                class="w-full h-full object-cover scale-x-[-1]">
+        </div>
+        
+        <!-- Content container -->
+        <div class="container mx-auto px-6 relative">
+            <div class="flex flex-col lg:flex-row">
+                <!-- Content on left -->
+                <div class="lg:w-1/2 lg:pr-12">
+                    <div class=" mb-10">
+                      <h2 class="text-4xl md:text-4xl font-bold text-[#2E7D32] animate-fadeInUp inline-flex gap-2 items-end relative" style="opacity: 1; transform: translateY(0px);">
+                          A
+                        <span class="relative inline-block">
+                          Nutritional Powerhouse
+                          <span class="absolute left-0 -bottom-1 w-full h-2 bg-[#FFEB3B] -z-10 rounded"></span>
+                        </span>
+                      </h2>
+                    </div>
+
+                    <p class="text-lg mb-6 text-gray-700 animate-fadeInUp animate-delay-100">Just one ounce (28 grams) of chia seeds contains an impressive nutritional profile that supports overall health and wellness.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start bg-green-100 p-4 rounded-lg animate-fadeInUp animate-delay-200">
+                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1 feature-icon">
+                                <i class="fas fa-heart text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Heart Health</h4>
+                                <p class="text-gray-700">Rich in omega-3 fatty acids that help reduce inflammation and lower cholesterol.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-green-100 p-4 rounded-lg animate-fadeInUp animate-delay-300">
+                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1 feature-icon">
+                                <i class="fas fa-weight text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Weight Management</h4>
+                                <p class="text-gray-700">High fiber content absorbs water and expands in your stomach, helping you feel full longer.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-green-100 p-4 rounded-lg animate-fadeInUp animate-delay-400">
+                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1 feature-icon">
+                                <i class="fas fa-bone text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Bone Strength</h4>
+                                <p class="text-gray-700">Excellent source of calcium, phosphorus, and magnesium for strong bones.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-green-100 p-4 rounded-lg animate-fadeInUp animate-delay-500">
+                            <div class="bg-green-100 p-2 rounded-full mr-4 mt-1 feature-icon">
+                                <i class="fas fa-bolt text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Energy Boost</h4>
+                                <p class="text-gray-700">Provides sustained energy with a perfect balance of protein, carbs, and fat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empty div to push content to left (for desktop) -->
+                <div class="lg:w-1/2 hidden lg:block"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Chia Seeds -->
+    <section class="relative py-20">
+        <!-- Full-height background image on left -->
+        <div class="absolute left-0 top-0 bottom-0 w-1/2 hidden lg:block">
+            <img src="./images/chia 1.png" alt="Chia Seeds Background" 
+                 class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Content container -->
+        <div class="container mx-auto px-6 relative">
+            <div class="lg:ml-[33.333%]">
+                <h2 class="text-4xl md:text-4xl font-bold text-[#2E7D32] inline-flex items-end gap-2 mb-10">
+                  Why Choose Our
+                  <span class="relative inline-block">
+                    Chia Seeds
+                    <span class="absolute left-0 -bottom-1 w-full h-2 bg-[#FFEB3B] -z-10 rounded"></span>
+                  </span>
+                </h2>
+
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-green-800 p-6 rounded-xl text-white shadow-md animate-fadeInUp animate-delay-100">
+                        <div class="text-green-400 text-4xl mb-4 feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="text-2xl mb-4">Premium Quality</h3>
+                        <p>Our chia seeds are carefully selected for optimal size, color, and nutritional content.</p>
+                    </div>
+                    <div class="bg-green-100 p-6 rounded-xl shadow-md animate-fadeInUp animate-delay-200">
+                        <div class="text-green-600 text-4xl mb-4 feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="text-2xl mb-4">Organic & Sustainable</h3>
+                        <p class="text-gray-700">Grown without synthetic pesticides using sustainable farming practices.</p>
+                    </div>
+                    <div class="bg-green-100 p-6 rounded-xl shadow-md animate-fadeInUp animate-delay-300">
+                        <div class="text-green-600 text-4xl mb-4 feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="text-2xl mb-4">Locally Sourced</h3>
+                        <p class="text-gray-700">We partner with local farmers to bring you the freshest chia seeds.</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 mt-8 gap-8">
+                    <div class="bg-green-800 p-6 rounded-xl text-white shadow-md animate-fadeInUp animate-delay-400">
+                        <div class="text-green-400 text-4xl mb-4 feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="text-2xl mb-4">100% Organic</h3>
+                        <p>Certified organic chia seeds grown naturally.</p>
+                    </div>
+                    <div class="bg-green-100 p-6 rounded-xl shadow-md animate-fadeInUp animate-delay-500">
+                        <div class="text-red-600 text-4xl mb-4 feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-2xl mb-4">Health Benefits</h3>
+                        <p class="text-gray-700">Packed with omega-3s, fiber, and protein for wellness.</p>
+                    </div>
+                    <div class="bg-green-100 p-6 rounded-xl shadow-md animate-fadeInUp animate-delay-600">
+                        <div class="text-green-600 text-4xl mb-4 feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 class="text-2xl mb-4">Local Delivery</h3>
+                        <p class="text-gray-700">Fresh products delivered to your doorstep locally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chia Seed Usage -->
+    <section id="usage" class="relative py-20">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="./images/shutterstock_551547994.jpg" alt="Chia Seeds Background" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-green-900 bg-opacity-70"></div>
+        </div>
+        
+        <!-- Content container -->
+        <div class="container mx-auto px-6 relative z-10">
+          <h2 class="text-4xl md:text-4xl font-bold text-white text-center inline-flex items-end gap-2 mb-10">
+              Ways to Use
+              <span class="relative inline-block">
+                Chia Seeds
+                <span class="absolute left-0 -bottom-1 w-full h-2 bg-[#FFEB3B] -z-10 rounded"></span>
+              </span>
+            </h2>
+
+            
+            <!-- Recipes grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Recipe 1: Chia Pudding -->
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                    <img src="./images/Pudding.png" alt="Chia Pudding" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-4 text-green-700">1. Chia Pudding</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li>3 tbsp chia seeds</li>
+                                <li>1 cup almond milk</li>
+                                <li>1 tsp honey/maple syrup</li>
+                                <li>Chopped fruits</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                            <ol class="list-decimal pl-5 text-sm text-gray-700">
+                                <li>Mix chia and milk in a bowl</li>
+                                <li>Stir well, wait 10 mins, stir again</li>
+                                <li>Cover and refrigerate overnight</li>
+                                <li>Add fruits before serving</li>
+                            </ol>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                            <p class="text-sm mb-2 text-gray-700">Add vanilla essence or cocoa powder for variety.</p>
+                            <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                            <p class="text-sm text-gray-700">Great for digestion, rich in fiber, low-calorie dessert.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 2: Chia Smoothie -->
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                    <img src="./images/Chia-Smoothie-Booster.png" alt="Chia Smoothie" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-4 text-green-700">2. Chia Smoothie</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li>1 banana or berries</li>
+                                <li>1 cup milk/yogurt</li>
+                                <li>1 tbsp chia seeds</li>
+                                <li>Honey (optional)</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                            <ol class="list-decimal pl-5 text-sm text-gray-700">
+                                <li>Blend fruits with milk/yogurt</li>
+                                <li>Stir in chia seeds</li>
+                                <li>Serve chilled</li>
+                            </ol>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                            <p class="text-sm mb-2 text-gray-700">Let sit 10 mins if you want softer seeds.</p>
+                            <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                            <p class="text-sm text-gray-700">Instant energy, great post-workout drink.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 3: Chia Detox Drink -->
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                    <img src="./images/Chia-Water-Detox-Drink.png" alt="Chia Detox Drink" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-4 text-green-700">3. Chia Detox Drink</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li>1 tbsp chia seeds</li>
+                                <li>1 glass warm water</li>
+                                <li>Juice of 1/2 lemon</li>
+                                <li>Honey (optional)</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                            <ol class="list-decimal pl-5 text-sm text-gray-700">
+                                <li>Soak chia in warm water for 30 mins</li>
+                                <li>Add lemon juice and honey</li>
+                                <li>Drink in morning on empty stomach</li>
+                            </ol>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                            <p class="text-sm mb-2 text-gray-700">Use filtered water and organic lemon.</p>
+                            <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                            <p class="text-sm text-gray-700">Boosts metabolism, flushes toxins, improves digestion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 4: Chia Jam -->
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                    <img src="./images/Chia-Jam.jpg" alt="Chia Jam" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-4 text-green-700">4. Chia Jam</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li>1 cup strawberries/blueberries</li>
+                                <li>2 tbsp chia seeds</li>
+                                <li>1 tbsp honey</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                            <ol class="list-decimal pl-5 text-sm text-gray-700">
+                                <li>Cook berries until soft</li>
+                                <li>Mash lightly, add chia and honey</li>
+                                <li>Let cool and refrigerate</li>
+                            </ol>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                            <p class="text-sm mb-2 text-gray-700">Use over toast, pancakes or yogurt.</p>
+                            <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                            <p class="text-sm text-gray-700">Healthy alternative to sugar-laden jam.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 5: Chia Yogurt -->
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                    <img src="./images/Chia-Yogurt.png" alt="Chia Yogurt" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-4 text-green-700">5. Chia Yogurt</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li>1 cup yogurt</li>
+                                <li>1 tbsp chia seeds</li>
+                                <li>Fruits, nuts or granola</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                            <ol class="list-decimal pl-5 text-sm text-gray-700">
+                                <li>Mix chia with yogurt</li>
+                                <li>Let sit 15-20 mins</li>
+                                <li>Add toppings</li>
+                            </ol>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                            <p class="text-sm mb-2 text-gray-700">Use Greek yogurt for extra protein.</p>
+                            <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                            <p class="text-sm text-gray-700">Good for gut health, rich in probiotics + fiber.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 6: Chia Roti -->
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                    <img src="./images/Chia-roti.png" alt="Chia Roti" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-4 text-green-700">6. Chia Roti</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li>2 cups wheat flour</li>
+                                <li>1 tsp ground chia</li>
+                                <li>Water, salt, ghee</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                            <ol class="list-decimal pl-5 text-sm text-gray-700">
+                                <li>Add chia powder to flour</li>
+                                <li>Knead into soft dough</li>
+                                <li>Make rotis as usual</li>
+                            </ol>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                            <p class="text-sm mb-2 text-gray-700">Can soak whole seeds and knead into dough.</p>
+                            <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                            <p class="text-sm text-gray-700">Adds Omega-3s and fiber to daily meals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 7: Energy Bars -->
+                <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                    <img src="./images/Chia-Energy-Bars.png" alt="Energy Bars" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl mb-4 text-green-700">7. Energy Bars</h3>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                            <ul class="list-disc pl-5 text-sm text-gray-700">
+                                <li>1 cup oats</li>
+                                <li>1/2 cup nuts & seeds</li>
+                                <li>2 tbsp chia seeds</li>
+                                <li>1/4 cup honey/dates</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                            <ol class="list-decimal pl-5 text-sm text-gray-700">
+                                <li>Mix all ingredients</li>
+                                <li>Press into tray</li>
+                                <li>Chill or bake</li>
+                                <li>Cut into bars</li>
+                            </ol>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                            <p class="text-sm mb-2 text-gray-700">Wrap individually for on-the-go snacks.</p>
+                            <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                            <p class="text-sm text-gray-700">Natural energy booster, no processed sugar.</p>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Recipe 8: Overnight Oats -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                <img src="./images/Overnight-Oats-Chia.jpg" alt="Overnight Oats" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl mb-4 text-green-700">8. Overnight Oats</h3>
+                    <div class="mb-4">
+                        <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>1/2 cup rolled oats</li>
+                            <li>1 tbsp chia seeds</li>
+                            <li>1 cup milk</li>
+                            <li>Fruits, nuts, honey</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                        <ol class="list-decimal pl-5 text-sm">
+                            <li>Combine oats, milk, chia</li>
+                            <li>Refrigerate overnight</li>
+                            <li>Top with fruits</li>
+                        </ol>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                        <p class="text-sm mb-2">Add cinnamon or cocoa powder for flavor.</p>
+                        <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                        <p class="text-sm">Keeps you full longer, ideal for busy mornings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 9: Chia Paratha -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                <img src="./images/Chia-Paratha-Stuffing.jpg" alt="Chia Paratha" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl mb-4 text-green-700">9. Chia Paratha</h3>
+                    <div class="mb-4">
+                        <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>1 boiled potato/paneer</li>
+                            <li>1 tbsp soaked chia</li>
+                            <li>Spices (jeera, chili, masala)</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                        <ol class="list-decimal pl-5 text-sm">
+                            <li>Mix all stuffing ingredients</li>
+                            <li>Roll into parathas</li>
+                            <li>Cook on tawa</li>
+                        </ol>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                        <p class="text-sm mb-2">Add chopped onions or coriander.</p>
+                        <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                        <p class="text-sm">Balanced meal with carbs, fiber and protein.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe 10: Chia Lemonade -->
+            <div class="bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm animate-fadeInUp">
+                <img src="./images/Chia-Lemonade.jpg" alt="Chia Lemonade" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl mb-4 text-green-700">10. Chia Lemonade</h3>
+                    <div class="mb-4">
+                        <h4 class="font-bold mb-2 text-green-600">Ingredients:</h4>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li>1 glass cold water</li>
+                            <li>1 tbsp soaked chia</li>
+                            <li>Juice of 1 lemon</li>
+                            <li>Honey to taste</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="font-bold mb-2 text-green-600">Method:</h4>
+                        <ol class="list-decimal pl-5 text-sm">
+                            <li>Soak chia for 15 mins</li>
+                            <li>Mix with lemon and water</li>
+                            <li>Serve chilled</li>
+                        </ol>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-bold mb-1 text-green-600">Tips:</h4>
+                        <p class="text-sm mb-2">Add mint or cucumber for freshness.</p>
+                        <h4 class="font-bold mb-1 text-green-600">Benefits:</h4>
+                        <p class="text-sm">Natural summer coolant, rich in nutrients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Chia Seed Usage -->
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+
+        <div class="text-center">    
+        <h2 class="text-4xl md:text-4xl font-bold text-[#2E7D32] inline-flex items-end gap-2 mb-10">
+  What Our
+  <span class="relative inline-block">
+    Customers Say
+    <span class="absolute left-0 -bottom-1 w-full h-2 bg-[#FFEB3B] -z-10 rounded"></span>
+  </span>
+</h2></div> 
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-green-50 p-8 rounded-xl shadow-md animate-fadeInUp animate-delay-100">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic mb-6">"I've been using these chia seeds in my morning smoothies for months and have noticed a significant improvement in my digestion and energy levels throughout the day."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah J." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Soniya</h4>
+                            <p class="text-sm text-gray-600">Health Coach</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-green-50 p-8 rounded-xl shadow-md animate-fadeInUp animate-delay-200">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic mb-6">"As a nutritionist, I recommend these chia seeds to all my clients. The quality is exceptional compared to what you find in most stores."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ashish</h4>
+                            <p class="text-sm text-gray-600">Nutritionist</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-green-50 p-8 rounded-xl shadow-md animate-fadeInUp animate-delay-300">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="italic mb-6">"My kids love the chia pudding I make with these seeds! It's become our go-to healthy dessert that I feel good about serving."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Emily R." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Anjali</h4>
+                            <p class="text-sm text-gray-600">Mother of Two</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-green-700 text-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl mb-6 animate-fadeInUp">Ready to Transform Your Health?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto animate-fadeInUp animate-delay-100">Incorporate our premium chia seeds into your diet and experience the difference quality makes.</p>
+            <a href="#contact" class="btn-transform bg-white text-green-700 font-bold px-10 py-4 rounded-full inline-block btn-pulse animate-fadeInUp animate-delay-200">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-green-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-3xl font-bold mb-4 animate-fadeInUp"><img class="h-12" src="./images/logo-white.png" alt="logo" /></h3>
+                    <p class="mb-6 animate-fadeInUp animate-delay-100">Your trusted source for premium quality chia seeds and nutritional information.</p>
+                    <div class="flex space-x-4 animate-fadeInUp animate-delay-200">
+                        <a href="#" class="text-white hover:text-green-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-green-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-green-300 text-xl"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="text-white hover:text-green-300 text-xl"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4 animate-fadeInUp">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li class="animate-fadeInUp animate-delay-100"><a href="#about" class="hover:text-green-300">About Chia Seeds</a></li>
+                        <li class="animate-fadeInUp animate-delay-200"><a href="#benefits" class="hover:text-green-300">Nutritional Benefits</a></li>
+                        <li class="animate-fadeInUp animate-delay-300"><a href="#usage" class="hover:text-green-300">Usage Ideas</a></li>
+                        <li class="animate-fadeInUp animate-delay-400"><a href="#testimonials" class="hover:text-green-300">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4 animate-fadeInUp">Contact Us</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start animate-fadeInUp animate-delay-100">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-green-400"></i>
+                            <p>2, 5th cross, 80 Feet Rd, Indira Nagar 1st Stage, Bengaluru, Karnataka 560038</p>
+                        </div>
+                        <div class="flex items-center animate-fadeInUp animate-delay-200">
+                            <i class="fas fa-phone-alt mr-3 text-green-400"></i>
+                            <p>+91886157809</p>
+                        </div>
+                        <div class="flex items-center animate-fadeInUp animate-delay-300">
+                            <i class="fas fa-envelope mr-3 text-green-400"></i>
+                            <p>connect@incibum.co, incibum.vipaka@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-green-800 pt-8 text-center animate-fadeInUp">
+                <p>&copy; 2025 incibum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Smooth scrolling with -10px top offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const target = document.querySelector(targetId);
+            if (target) {
+                const top = target.getBoundingClientRect().top + window.scrollY - 50; // <- Offset here
+                window.scrollTo({
+                    top,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Update active state
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-green-600', 'font-semibold');
+                link.querySelector('span:first-child').classList.remove('scale-105');
+            });
+            this.classList.add('text-green-600', 'font-semibold');
+            this.querySelector('span:first-child').classList.add('scale-105');
+        });
+    });
+
+    // Highlight active section on scroll
+    window.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('section');
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('text-green-600', 'font-semibold');
+            link.querySelector('span:first-child').classList.remove('scale-105');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('text-green-600', 'font-semibold');
+                link.querySelector('span:first-child').classList.add('scale-105');
+                link.querySelector('span:last-child').classList.add('w-full');
+            } else {
+                link.querySelector('span:last-child').classList.remove('w-full');
+            }
+        });
+    });
+</script>
+
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (menuButton && mobileMenu) {
+                menuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('open');
+                    // Toggle between hamburger and close icon
+                    const icon = menuButton.querySelector('i');
+                    if (mobileMenu.classList.contains('open')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            }
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = document.querySelectorAll('#mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    document.querySelector('#mobile-menu-button i').classList.remove('fa-times');
+                    document.querySelector('#mobile-menu-button i').classList.add('fa-bars');
+                });
+            });
+            
+            // Animation on scroll
+            const animateElements = document.querySelectorAll('.animate-fadeInUp, .animate-fadeIn');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(element => {
+                element.style.opacity = 0;
+                if (element.classList.contains('animate-fadeInUp')) {
+                    element.style.transform = 'translateY(20px)';
+                }
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
