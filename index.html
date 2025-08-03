@@ -135,23 +135,23 @@
                 </div>
                 
                <div class="hidden md:flex items-center space-x-6">
-                      <a href="#about" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                      <a href="#about" class="nav-link relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
                         <span>About</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
                       </a>
-                      <a href="#benefits" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                      <a href="#benefits" class="nav-link relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
                         <span>Benefits</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
                       </a>
-                      <a href="#usage" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                      <a href="#usage" class="nav-link relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
                         <span>Usage</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
                       </a>
-                      <a href="#testimonials" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                      <a href="#testimonials" class="nav-link relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
                         <span>Testimonials</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
                       </a>
-                      <a href="#contact" class="relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
+                      <a href="#contact" class="nav-link relative group text-white font-medium transition-colors duration-300 hover:text-green-200">
                         <span>Contact</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FFEB3B] transition-all duration-300 group-hover:w-full"></span>
                       </a>
@@ -811,27 +811,34 @@
         </div>
     </section>    
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-green-700 text-white text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl mb-6 animate-fadeInUp">Ready to Transform Your Health?</h2>
-            <p class="text-xl mb-10 max-w-2xl mx-auto animate-fadeInUp animate-delay-100">Incorporate our premium chia seeds into your diet and experience the difference quality makes.</p>
-            <a href="#contact" class="btn-transform bg-white text-green-700 font-bold px-10 py-4 rounded-full inline-block btn-pulse animate-fadeInUp animate-delay-200">Get In Touch</a>
-        </div>
-    </section>
+   <!-- Contact Info Section -->
+<section id="contact" class="py-20 bg-green-700 text-white text-center">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl mb-6 animate-fadeInUp">Ready to Transform Your Health?</h2>
+    <p class="text-xl mb-10 max-w-2xl mx-auto animate-fadeInUp animate-delay-100">
+      Incorporate our premium chia seeds into your diet and experience the difference quality makes.
+    </p>
+    <div class="text-lg space-y-2 animate-fadeInUp animate-delay-200">
+      <p><strong>📞 Phone:</strong> <a href="tel:+91886157809" class="underline hover:text-yellow-300">+91 88615 7809</a></p>
+      <p><strong>📧 Email:</strong>
+        <a href="mailto:connect@incibum.co" class="underline hover:text-yellow-300">connect@incibum.co</a>,
+        <a href="mailto:incibum.vipaka@gmail.com" class="underline hover:text-yellow-300">incibum.vipaka@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Footer -->
-    <footer id="contact" class="bg-green-900 text-white pt-16 pb-8">
+    <footer  class="bg-green-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-12 mb-12">
                 <div>
                     <h3 class="text-3xl font-bold mb-4 animate-fadeInUp"><img class="h-12" src="./images/logo-white.png" alt="logo" /></h3>
                     <p class="mb-6 animate-fadeInUp animate-delay-100">Your trusted source for premium quality chia seeds and nutritional information.</p>
                     <div class="flex space-x-4 animate-fadeInUp animate-delay-200">
-                        <a href="#" class="text-white hover:text-green-300 text-xl"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white hover:text-green-300 text-xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white hover:text-green-300 text-xl"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="text-white hover:text-green-300 text-xl"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100079182409492&sk=about" class="text-white hover:text-green-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/incibum.vipaka/" class="text-white hover:text-green-300 text-xl"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div>
@@ -862,7 +869,7 @@
                 </div>
             </div>
             <div class="border-t border-green-800 pt-8 text-center animate-fadeInUp">
-                <p>&copy; 2025 incibum. All rights reserved.</p>
+                <p>&copy; 2025 incibum. All rights reserved. design by <a target="_blank" href="https://zngweb.com/" class="text-yellow-400">zngweb.com</a></p>
             </div>
         </div>
     </footer>
@@ -907,13 +914,16 @@
         document.querySelectorAll('.nav-link').forEach(link => {
             link.classList.remove('text-green-600', 'font-semibold');
             link.querySelector('span:first-child').classList.remove('scale-105');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('text-green-600', 'font-semibold');
-                link.querySelector('span:first-child').classList.add('scale-105');
-                link.querySelector('span:last-child').classList.add('w-full');
-            } else {
-                link.querySelector('span:last-child').classList.remove('w-full');
-            }
+
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('text-green-600', 'font-semibold');
+            link.querySelector('span:first-child').classList.add('scale-105');
+            link.querySelector('span:last-child').classList.add('w-full'); // ✅ This makes the underline full width
+        } else {
+            link.querySelector('span:last-child').classList.remove('w-full');
+        }
+
+
         });
     });
 </script>
